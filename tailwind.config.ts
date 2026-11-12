@@ -26,6 +26,17 @@ const config: Config = {
           "monospace",
         ],
       },
+      fontSize: {
+        "2xs": ["0.6875rem", { lineHeight: "1rem" }],
+      },
+      letterSpacing: {
+        tight: "-0.015em",
+        tighter: "-0.025em",
+      },
+      lineHeight: {
+        relaxed: "1.625",
+        loose: "1.75",
+      },
     },
   },
   plugins: [],
