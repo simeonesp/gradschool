@@ -65,7 +65,7 @@ export default function LessonPage({
     <div className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 h-14 bg-white border-b border-gray-200 flex items-center justify-between px-6 z-10">
         <Link href="/dashboard" className="text-lg font-semibold text-gray-900">
-          GatherOS
+          Gradschool
         </Link>
         <span className="text-sm text-gray-500">
           FOUND 200 &middot; Week 1 &middot; 3 of 5

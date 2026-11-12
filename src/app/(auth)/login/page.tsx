@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function LoginPage() {
   return (
     <div>
-      <h1 className="text-lg font-semibold text-gray-900 mb-8">GatherOS</h1>
+      <h1 className="text-lg font-semibold text-gray-900 mb-8">Gradschool</h1>
 
       <h2 className="text-2xl font-semibold text-gray-900 mb-6">Sign in</h2>
 
