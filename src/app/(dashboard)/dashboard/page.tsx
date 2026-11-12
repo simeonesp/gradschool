@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const nextCourses = [
+const upcomingCourses = [
   { code: "FOUND 210", title: "Minds and Cognition" },
   { code: "FOUND 220", title: "Language, Meaning, and Communication" },
   { code: "FOUND 230", title: "Decision, Judgment, and Rationality" },
@@ -10,7 +10,7 @@ export default function DashboardPage() {
   return (
     <div>
       <h1 className="text-2xl font-semibold text-gray-900">
-        Continue where you left off
+        Pick up where you left off
       </h1>
 
       <Link
@@ -20,53 +20,54 @@ export default function DashboardPage() {
         <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">
           FOUND 200
         </p>
-        <h2 className="text-xl font-semibold text-gray-900 mt-1">
+        <p className="text-xl font-semibold text-gray-900 mt-1">
           Formal Systems and Representation
-        </h2>
+        </p>
         <p className="text-gray-600 mt-2">
-          Week 1 &middot; The Nature of Formal Systems
+          Week 1: The Nature of Formal Systems
         </p>
         <p className="text-sm text-gray-500 mt-1">
-          8% complete &middot; 3 of 36 lessons
+          3 of 36 lessons completed
         </p>
         <p className="text-blue-600 font-medium mt-4 hover:underline">
-          Continue &rarr;
+          Continue
         </p>
       </Link>
 
-      <div className="mt-12">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Your stats</h2>
-        <div className="flex gap-12">
-          <p className="text-gray-900">
-            <span className="font-medium">1</span> course active
+      <section className="mt-12">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Progress</h2>
+        <div className="flex gap-12 text-gray-900">
+          <p>
+            <span className="font-medium">1</span> active course
           </p>
-          <p className="text-gray-900">
+          <p>
             <span className="font-medium">12</span> hours this month
           </p>
-          <p className="text-gray-900">
-            <span className="font-medium">Week 1</span> of 12
+          <p>
+            Week <span className="font-medium">1</span> of 12
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-12">
+      <section className="mt-12">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
-          Next courses
+          Upcoming courses
         </h2>
-        <div className="space-y-3">
-          {nextCourses.map((course) => (
-            <div
+        <div className="space-y-1">
+          {upcomingCourses.map((course) => (
+            <Link
               key={course.code}
-              className="flex justify-between items-center py-3 opacity-60"
+              href={`/courses/${course.code.toLowerCase().replace(" ", "-")}`}
+              className="flex justify-between items-center py-3 opacity-50"
             >
               <p className="text-gray-900">
-                {course.code} &middot; {course.title}
+                {course.code}: {course.title}
               </p>
               <p className="text-sm text-gray-500">Locked</p>
-            </div>
+            </Link>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

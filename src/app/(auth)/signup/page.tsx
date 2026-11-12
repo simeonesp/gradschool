@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function SignupPage() {
   return (
     <div>
-      <h1 className="text-lg font-semibold text-gray-900 mb-8">Gradschool</h1>
+      <p className="text-lg font-semibold text-gray-900 mb-8">Gradschool</p>
 
-      <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-        Create your account
-      </h2>
+      <h1 className="text-2xl font-semibold text-gray-900 mb-6">
+        Create an account
+      </h1>
 
       <form className="space-y-4">
         <div>
@@ -21,7 +21,8 @@ export default function SignupPage() {
             type="text"
             id="name"
             name="name"
-            className="w-full h-10 px-3 border border-gray-200 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none"
+            autoComplete="name"
+            className="w-full h-10 px-3 border border-gray-200 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-colors duration-150"
           />
         </div>
 
@@ -36,7 +37,8 @@ export default function SignupPage() {
             type="email"
             id="email"
             name="email"
-            className="w-full h-10 px-3 border border-gray-200 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none"
+            autoComplete="email"
+            className="w-full h-10 px-3 border border-gray-200 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-colors duration-150"
           />
         </div>
 
@@ -51,13 +53,14 @@ export default function SignupPage() {
             type="password"
             id="password"
             name="password"
-            className="w-full h-10 px-3 border border-gray-200 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none"
+            autoComplete="new-password"
+            className="w-full h-10 px-3 border border-gray-200 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-colors duration-150"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full h-10 bg-gray-900 text-white rounded-md hover:bg-gray-800 font-medium mt-2"
+          className="w-full h-10 bg-gray-900 text-white rounded-md hover:bg-gray-800 font-medium mt-2 transition-colors duration-150"
         >
           Create account
         </button>

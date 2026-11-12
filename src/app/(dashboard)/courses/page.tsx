@@ -47,28 +47,23 @@ export default function CoursesPage() {
   return (
     <div>
       <h1 className="text-2xl font-semibold text-gray-900">Courses</h1>
-      <p className="text-gray-600 mt-1 max-w-xl">
-        Foundation courses required for all programs.
-      </p>
+      <p className="text-gray-600 mt-2 max-w-xl">Foundation courses for all programs.</p>
 
-      <div className="mt-8 space-y-1">
+      <div className="mt-8">
         {courses.map((course) => (
           <Link
             key={course.id}
             href={`/courses/${course.id}`}
-            className={`flex justify-between items-center py-4 hover:bg-gray-50 -mx-2 px-2 rounded transition-colors duration-150 ${
-              course.locked ? "opacity-60" : ""
+            className={`flex justify-between items-center py-4 border-t border-gray-100 first:border-t-0 hover:bg-gray-50 -mx-2 px-2 transition-colors duration-150 ${
+              course.locked ? "opacity-50" : ""
             }`}
           >
             <div>
               <p className="text-gray-900">
-                <span className="font-medium">{course.code}</span> &middot;{" "}
-                {course.title}
+                <span className="font-medium">{course.code}</span>: {course.title}
               </p>
               {course.progress && (
-                <p className="text-sm text-gray-500 mt-0.5">
-                  {course.progress} complete
-                </p>
+                <p className="text-sm text-gray-500 mt-0.5">{course.progress} complete</p>
               )}
             </div>
             <p className="text-sm text-gray-500">{course.status}</p>
